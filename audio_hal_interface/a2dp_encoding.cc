@@ -802,6 +802,15 @@ bool a2dp_is_audio_codec_config_params_changed(
       }
       break;
     }
+    case BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV2:
+      [[fallthrough]];
+    case BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV3:
+      [[fallthrough]];
+    case BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV5:
+      changed = true;
+      LOG(ERROR) << __func__
+                 << ": Consider changed to LHDC from " << (int) codec_config->codecType;
+      break;
     case BTAV_A2DP_CODEC_INDEX_MAX:
       [[fallthrough]];
     default:
@@ -1046,6 +1055,15 @@ bool a2dp_is_audio_codec_config_params_changed_2_1(
       }
       break;
     }
+    case BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV2:
+      [[fallthrough]];
+    case BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV3:
+      [[fallthrough]];
+    case BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV5:
+      changed = true;
+      LOG(ERROR) << __func__
+                 << ": Consider changed to LHDC from " << (int) codec_config->codecType;
+      break;
     case BTAV_A2DP_CODEC_INDEX_MAX:
       [[fallthrough]];
     default:
@@ -2412,7 +2430,6 @@ void cleanup() {
   LOG(WARNING) << __func__ << ": end_session has been called.";
   end_session();
 }
-
 
 // check for audio feeding params are same for newly set up codec vs
 // what was already set up on hidl side
