@@ -96,6 +96,7 @@ using ::bluetooth::audio::aidl::codec::A2dpCodecToHalSampleRate;
 using ::bluetooth::audio::aidl::codec::A2dpLdacToHalConfig;
 using ::bluetooth::audio::aidl::codec::A2dpSbcToHalConfig;
 using ::bluetooth::audio::aidl::codec::A2dpAptxAdaptiveToHalConfig;
+using ::bluetooth::audio::aidl::codec::A2dpLhdcv5ToHalConfig;
 
 /***
  *
@@ -293,6 +294,15 @@ bool a2dp_get_selected_hal_codec_config(CodecConfiguration* codec_config) {
       }
 	  break;
     }
+    case BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV2:
+      return true;
+    case BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV3:
+      [[fallthrough]];
+    case BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV5:
+      if (!A2dpLhdcv5ToHalConfig(codec_config, a2dp_config)) {
+        return false;
+      }
+      break;
     case BTAV_A2DP_CODEC_INDEX_MAX:
       [[fallthrough]];
     default:

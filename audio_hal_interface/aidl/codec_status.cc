@@ -866,6 +866,12 @@ bool A2dpAptxAdaptiveToHalConfig(CodecConfiguration* codec_config,
   return true;
 }
 
+// Savitech Patch - START (non-Offload only)
+bool A2dpLhdcv5ToHalConfig(CodecConfiguration* codec_config,
+                           A2dpCodecConfig* a2dp_config) {
+  return true;
+}
+
 bool UpdateOffloadingCapabilities(
     const std::vector<btav_a2dp_codec_config_t>& framework_preference) {
   audio_hal_capabilities =
