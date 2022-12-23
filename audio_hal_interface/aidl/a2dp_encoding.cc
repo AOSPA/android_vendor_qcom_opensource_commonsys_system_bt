@@ -67,6 +67,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE
 #include <a2dp_vendor.h>
 #include "controller.h"
 #include "a2dp_vendor_ldac_constants.h"
+#include "a2dp_vendor_lhdc_constants.h"
 //#include "a2dp_vendor_aptx_adaptive.h"
 #include "a2dp_aac.h"
 #include "btif_ahim.h"
@@ -96,6 +97,7 @@ using ::bluetooth::audio::aidl::codec::A2dpCodecToHalSampleRate;
 using ::bluetooth::audio::aidl::codec::A2dpLdacToHalConfig;
 using ::bluetooth::audio::aidl::codec::A2dpSbcToHalConfig;
 using ::bluetooth::audio::aidl::codec::A2dpAptxAdaptiveToHalConfig;
+using ::bluetooth::audio::aidl::codec::A2dpLhdcv5ToHalConfig;
 
 /***
  *
@@ -293,6 +295,15 @@ bool a2dp_get_selected_hal_codec_config(CodecConfiguration* codec_config) {
       }
 	  break;
     }
+    case BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV2:
+      [[fallthrough]];
+    case BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV3:
+      [[fallthrough]];
+    case BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV5:
+      if (!A2dpLhdcv5ToHalConfig(codec_config, a2dp_config)) {
+        return false;
+      }
+      break;
     case BTAV_A2DP_CODEC_INDEX_MAX:
       [[fallthrough]];
     default:
@@ -343,7 +354,10 @@ bool a2dp_get_selected_hal_codec_config(CodecConfiguration* codec_config) {
     if ((A2DP_VendorCodecGetVendorId(p_codec_info)) == A2DP_LDAC_VENDOR_ID) {
       codec_config->encodedAudioBitrate = A2DP_GetTrackBitRate(p_codec_info);
       LOG(INFO) << __func__ << "AIDL LDAC bitrate" << codec_config->encodedAudioBitrate;
-    } else {
+    } else if ((A2DP_VendorCodecGetVendorId(p_codec_info)) == A2DP_LHDC_VENDOR_ID) {
+      codec_config->encodedAudioBitrate = A2DP_GetTrackBitRate(p_codec_info);
+      LOG(INFO) << __func__ << "AIDL LHDC bitrate" << codec_config->encodedAudioBitrate;
+	} else {
       /* BR = (Sampl_Rate * PCM_DEPTH * CHNL)/Compression_Ratio */
       int bits_per_sample = 16; // TODO
       codec_config->encodedAudioBitrate = (samplerate * bits_per_sample * 2)/4;
@@ -546,7 +560,6 @@ SessionType get_session_type() {
        return active_hal_interface->GetTransportInstance()->GetSessionType();
     } else return SessionType::UNKNOWN;
 }
-
 
 // check for audio feeding params are same for newly set up codec vs
 // what was already set up on hidl side

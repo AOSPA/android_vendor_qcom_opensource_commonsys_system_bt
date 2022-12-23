@@ -802,6 +802,15 @@ bool a2dp_is_audio_codec_config_params_changed(
       }
       break;
     }
+    case BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV2:
+      [[fallthrough]];
+    case BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV3:
+      [[fallthrough]];
+    case BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV5:
+      changed = true;
+      LOG(ERROR) << __func__
+                 << ": Consider changed to LHDC from " << (int) codec_config->codecType;
+      break;
     case BTAV_A2DP_CODEC_INDEX_MAX:
       [[fallthrough]];
     default:
@@ -1046,6 +1055,15 @@ bool a2dp_is_audio_codec_config_params_changed_2_1(
       }
       break;
     }
+    case BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV2:
+      [[fallthrough]];
+    case BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV3:
+      [[fallthrough]];
+    case BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV5:
+      changed = true;
+      LOG(ERROR) << __func__
+                 << ": Consider changed to LHDC from " << (int) codec_config->codecType;
+      break;
     case BTAV_A2DP_CODEC_INDEX_MAX:
       [[fallthrough]];
     default:
@@ -2413,6 +2431,9 @@ void cleanup() {
   end_session();
 }
 
+//static bool isLHDC(btav_a2dp_codec_index_t idx) {
+//    return (idx == BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV2 || idx == BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV3 || idx == BTAV_A2DP_CODEC_INDEX_SOURCE_LHDCV5);
+//}
 
 // check for audio feeding params are same for newly set up codec vs
 // what was already set up on hidl side
@@ -2427,6 +2448,7 @@ bool is_restart_session_needed() {
     AudioConfiguration_2_1 audio_config = a2dp_sink_2_1->GetAudioConfiguration();
     if (split_enabled && session_type ==
                    SessionType::A2DP_HARDWARE_OFFLOAD_DATAPATH) {
+      //if (isLHDC(audio_config.codecConfig.codec_type)) return true;
       return a2dp_is_audio_codec_config_params_changed_2_1(
                        &audio_config.codecConfig);
     } else if(!split_enabled && session_type ==
@@ -2451,6 +2473,7 @@ bool is_restart_session_needed() {
     AudioConfiguration audio_config = a2dp_sink->GetAudioConfiguration();
     if (split_enabled && session_type ==
                    SessionType::A2DP_HARDWARE_OFFLOAD_DATAPATH) {
+      //if (isLHDC(audio_config.codecConfig.codec_type)) return true;
       return a2dp_is_audio_codec_config_params_changed(
                        &audio_config.codecConfig);
     } else if(!split_enabled && session_type ==
