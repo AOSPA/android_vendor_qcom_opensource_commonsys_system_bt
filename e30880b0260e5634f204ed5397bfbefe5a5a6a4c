@@ -16,6 +16,24 @@
       "message": "Thank you for finishing the ports of these!\n\nHave you been able to test?",
       "revId": "e30880b0260e5634f204ed5397bfbefe5a5a6a4c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "650538fa_fdfcd5c6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000889
+      },
+      "writtenOn": "2023-05-08T23:00:51Z",
+      "side": 1,
+      "message": "Not yet, but would be surprised if it works. I\u0027m still looking for a way to replace these libs and apps in stock rom as my main phone isn\u0027t supported by PA (yet? maybe qssi will work, but I have no idea how to build it, probably lot\u0027s of features will be missing from stock rom as well). Just using Bluetooth.apk from PA build didn\u0027t work because selinux_android_setcontext(1002, 0, \"default:privapp:targetSdkVersion\u003d33:complete\", \"com.android.bluetooth\") failed. \nShould we drop lhdc ext api functions? They seem to be for some kind of spatial audio and metadata, can\u0027t see how that will work in PA.\nAlso not sure what framework/api/current.txt is used for.",
+      "parentUuid": "b148bf88_41ab776b",
+      "revId": "e30880b0260e5634f204ed5397bfbefe5a5a6a4c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
