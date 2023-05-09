@@ -52,6 +52,24 @@
       "parentUuid": "650538fa_fdfcd5c6",
       "revId": "e30880b0260e5634f204ed5397bfbefe5a5a6a4c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "12367557_30dd70bc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000889
+      },
+      "writtenOn": "2023-05-09T10:29:30Z",
+      "side": 1,
+      "message": "Red Magic 8 Pro. Tag seems to be LA.QSSI.13.0.r1-07500-qssi.0-1 (at least for 3.19, now I\u0027m on 3.28, so it was probably updated to something like LA.QSSI.13.0.r1-09800-qssi.0 based on release date), not sure if it\u0027s going to be compatible or not. Replacing libbluetooth_qti_jni.so didn\u0027t work because of missing bt_adv_audio (so JNI failed to find nececcary methods) and replacing apk will crash because of that selinux stuff.\nJust replacing libbluetooth_qti.so didn\u0027t work also and I have no idea why exactly (logs: https://pastebin.com/JqXP8Bqp), seems to be something with BLE (BLE_START_TIMEOUT). Any ideas? Or this is once again bt_adv_audio issue?\nSo current.txt is not used anywhere in the build process?",
+      "parentUuid": "462ec5c2_11cc3adc",
+      "revId": "e30880b0260e5634f204ed5397bfbefe5a5a6a4c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
