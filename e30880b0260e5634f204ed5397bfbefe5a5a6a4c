@@ -34,6 +34,24 @@
       "parentUuid": "b148bf88_41ab776b",
       "revId": "e30880b0260e5634f204ed5397bfbefe5a5a6a4c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "462ec5c2_11cc3adc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-05-09T07:45:17Z",
+      "side": 1,
+      "message": "which device do you have?\n\nI think it would be more trouble than it\u0027s worth to get PA Bluetooth to work on stock since stock is unlikely to be close to our CLO and AOSP tags.\n\nI\u0027m thinking leave lhdcext unless there\u0027s a specific reason to kill it.\n\nCurrent.txt documents the API, which we are generally not supposed to change from AOSP, however, Qualcomm does in BT, so I\u0027m not necessarily opposed to it.",
+      "parentUuid": "650538fa_fdfcd5c6",
+      "revId": "e30880b0260e5634f204ed5397bfbefe5a5a6a4c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
