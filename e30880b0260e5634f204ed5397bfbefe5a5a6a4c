@@ -70,6 +70,24 @@
       "parentUuid": "462ec5c2_11cc3adc",
       "revId": "e30880b0260e5634f204ed5397bfbefe5a5a6a4c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4703ba6d_fc8df3ec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-05-14T17:33:05Z",
+      "side": 1,
+      "message": "sorry, thought I replied to this.  I don\u0027t know if we can expect it to work on stock.  Can I help you build a qssi or a ROM for your device?\n\ncurrent.txt is similar to frameworks/base, it is a compile time check for APIs to match the stable API.  In framework, generally, you want to @hide new public methods so you don\u0027t change the API.  In Bluetooth, if it compiles, we\u0027re probably fine.",
+      "parentUuid": "12367557_30dd70bc",
+      "revId": "e30880b0260e5634f204ed5397bfbefe5a5a6a4c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
