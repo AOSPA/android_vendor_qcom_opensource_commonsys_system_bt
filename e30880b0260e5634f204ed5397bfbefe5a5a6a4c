@@ -88,6 +88,24 @@
       "parentUuid": "12367557_30dd70bc",
       "revId": "e30880b0260e5634f204ed5397bfbefe5a5a6a4c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "adf50d5f_efb89334",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000889
+      },
+      "writtenOn": "2023-05-17T01:37:24Z",
+      "side": 1,
+      "message": "That would be great, I have no idea how to do that by myself. The kernel sources are available, also someone built a somewhat working TWRP tree. I just need a reliable way to revert to stock in case something will go wrong (because it will for sure)",
+      "parentUuid": "4703ba6d_fc8df3ec",
+      "revId": "e30880b0260e5634f204ed5397bfbefe5a5a6a4c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
