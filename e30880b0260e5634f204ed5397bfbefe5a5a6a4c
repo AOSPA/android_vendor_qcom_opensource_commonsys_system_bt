@@ -106,6 +106,24 @@
       "parentUuid": "4703ba6d_fc8df3ec",
       "revId": "e30880b0260e5634f204ed5397bfbefe5a5a6a4c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "36b6496b_c6052047",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000012
+      },
+      "writtenOn": "2023-05-25T20:17:58Z",
+      "side": 1,
+      "message": "if you can unlock your bootloader, you can root with magisk and dump your super image, boot image, dtbo, vbmeta, vbmeta_system, and vendor_boot.",
+      "parentUuid": "adf50d5f_efb89334",
+      "revId": "e30880b0260e5634f204ed5397bfbefe5a5a6a4c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
