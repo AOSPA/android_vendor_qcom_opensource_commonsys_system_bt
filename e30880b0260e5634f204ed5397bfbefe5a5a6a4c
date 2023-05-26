@@ -124,6 +124,24 @@
       "parentUuid": "adf50d5f_efb89334",
       "revId": "e30880b0260e5634f204ed5397bfbefe5a5a6a4c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "218244d9_6e8baf2a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000889
+      },
+      "writtenOn": "2023-05-26T15:04:53Z",
+      "side": 1,
+      "message": "I\u0027m already rooted and already extracted those images from payload.bin",
+      "parentUuid": "36b6496b_c6052047",
+      "revId": "e30880b0260e5634f204ed5397bfbefe5a5a6a4c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
