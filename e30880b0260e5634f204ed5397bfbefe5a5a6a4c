@@ -142,6 +142,24 @@
       "parentUuid": "36b6496b_c6052047",
       "revId": "e30880b0260e5634f204ed5397bfbefe5a5a6a4c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "9303ec49_cad7293f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000889
+      },
+      "writtenOn": "2023-07-12T02:57:40Z",
+      "side": 1,
+      "message": "That\u0027s not the point, restoring via fastboot is unreliable (especially after installing custom ROM, ask me how I know).\n\nI\u0027ve actually tried porting PA stack to stock ROM and it works to some degree. I can successfully select LHDC in dev options, but sound will be played through phone speaker and not the A2DP. Logcat:\n```\n07-12 05:21:05.231  1860  2565 E APM::HwModule: createDevice: could not find HW module for device 0080 address 00:02:5B:00:FF:01\n07-12 05:21:05.231  2886  3768 E AudioSystem-JNI: Command failed for android_media_AudioSystem_setDeviceConnectionState: -38\n07-12 05:21:05.231  2886  3768 I AS.AudioDeviceInventory: APM failed to make available A2DP device addr\u003d00:02:5B:00:FF:01 error\u003d1\n```\nCould this be related to the HwModule error? What it even is? The session type seems to be A2DP_SOFTWARE_ENCODING_DATAPATH, which is expected, so not sure why some HW modules are needed.\n\nAlso this looks suspicious:\n```\n07-12 05:21:05.213  2886  3766 E AudioSystem: Unknown BT codec 0x9 for conversion to audio format\n```\nPA will have the same issue, at least it seems so, see audioFormatToBluetoothSourceCodec in AudioSystem.\n\nDo you know how to force software encoding? I can upload logs somewhere if needed.",
+      "parentUuid": "218244d9_6e8baf2a",
+      "revId": "e30880b0260e5634f204ed5397bfbefe5a5a6a4c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
