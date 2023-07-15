@@ -160,6 +160,24 @@
       "parentUuid": "218244d9_6e8baf2a",
       "revId": "e30880b0260e5634f204ed5397bfbefe5a5a6a4c",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9744b8e9_0410e110",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000889
+      },
+      "writtenOn": "2023-07-15T18:11:25Z",
+      "side": 1,
+      "message": "It works now. Required changing /system/vendor/etc/audio/sku_kalama*/audio_policy_configuration.xml and audioFormatToBluetoothSourceCodec.",
+      "parentUuid": "9303ec49_cad7293f",
+      "revId": "e30880b0260e5634f204ed5397bfbefe5a5a6a4c",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
