@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "faf2cc01_886353a6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000143
+      },
+      "writtenOn": "2023-10-17T11:41:32Z",
+      "side": 1,
+      "message": "This or revert https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/bluetooth_ext/-/commit/48742623f30021e3e693736a1de48e01231e3645",
+      "revId": "072437aa05ae537ea639adf676a519d9ccaee8d7",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ]
+}
