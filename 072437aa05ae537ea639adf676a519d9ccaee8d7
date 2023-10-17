@@ -34,6 +34,24 @@
       "parentUuid": "faf2cc01_886353a6",
       "revId": "072437aa05ae537ea639adf676a519d9ccaee8d7",
       "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "47985fcc_c98afe46",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000092
+      },
+      "writtenOn": "2023-10-17T12:21:27Z",
+      "side": 1,
+      "message": "sm8550 use different bluetooth_ext? i don\u0027t have this commit in bluetooth_ext",
+      "parentUuid": "62340473_8acf0891",
+      "revId": "072437aa05ae537ea639adf676a519d9ccaee8d7",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
     }
   ]
 }
