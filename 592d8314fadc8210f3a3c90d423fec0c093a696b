@@ -1,4 +1,22 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "03fc1439_313ec6bd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000143
+      },
+      "writtenOn": "2023-10-17T11:33:50Z",
+      "side": 1,
+      "message": "Please fork [1] and also revert [2] because this will break compilation for 8550\n\n[1] https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/bluetooth_ext\n[2] https://git.codelinaro.org/clo/la/platform/vendor/qcom-opensource/bluetooth_ext/-/commit/48742623f30021e3e693736a1de48e01231e3645",
+      "revId": "592d8314fadc8210f3a3c90d423fec0c093a696b",
+      "serverId": "3162e3d8-d894-470e-abd9-724f7b0effad"
+    }
+  ],
   "submitRequirementResults": []
 }
